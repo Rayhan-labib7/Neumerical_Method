@@ -14,10 +14,20 @@ int main()
     cout<<"Newtom Raphson Method : x^3-2x-5 "<<endl;
     double x;
     cin>>x;
-    for(int i=0;i<10;i++)
+    double xn_1;
+    double ans;
+    int step=0;
+    while(1)
     {
+        xn_1=x;
         x=x-((f_x(x))/(f_x1(x)));
-        cout<<x<<endl;
+        if(xn_1==x)
+        {
+            ans=x;
+            break;
+        }
+        step++;
     }
+    cout<<"Root "<<ans<<" Step "<<step<<endl;
 
 }
