@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+const double eps = 1e-9;
 double f_x(double x)
 {
     return (x*x*x-2*x-5);
@@ -21,12 +22,13 @@ int main()
     {
         xn_1=x;
         x=x-((f_x(x))/(f_x1(x)));
-        if(xn_1==x)
+        step++;
+        if(abs(x-xn_1)<eps)
         {
             ans=x;
             break;
         }
-        step++;
+        
     }
     cout<<"Root "<<ans<<" Step "<<step<<endl;
 
