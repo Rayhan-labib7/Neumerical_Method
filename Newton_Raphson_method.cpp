@@ -23,7 +23,7 @@ int main()
         xn_1=x;
         x=x-((f_x(x))/(f_x1(x)));
         step++;
-        if(abs(x-xn_1)<eps)
+        if((abs(x-xn_1)/x)<eps)
         {
             ans=x;
             break;
